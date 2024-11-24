@@ -1,0 +1,70 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #f4f6f9
+}
+
+.container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+nav {
+    border-right: 1px solid #ddd;
+    position: relative;
+    top: 10px;
+}
+
+main {
+    flex-grow: 1; 
+    overflow-y: auto;
+}
+/* Adjust chart size and spacing */
+canvas {
+    width: 100%; 
+    height: 300px;
+    max-height: 350px; 
+    margin: 10px auto; 
+}
+/* Style the chart containers */
+.chart-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+/* Adjust chart titles */
+.chart-container h5 {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Adjust sidebar styles */
+.sidebar, .sidebar-menu, nav {
+    background-color: #202531 !important;
+}
+
+.sidebar a, .sidebar-menu a {
+    color: #ccc !important;
+}
+
+/* Highlight active menu item */
+.sidebar-menu .active {
+    background-color: #495057;
+}
+
+/* Add responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    canvas {
+        height: 250px !important; /* Smaller charts on mobile */
+    }
+    .chart-container {
+        padding: 15px;
+    }
+}
+
